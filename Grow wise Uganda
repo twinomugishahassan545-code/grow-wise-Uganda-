@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GrowWise Uganda | Investment</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7f5;
+    color: #172b22;
+}
+
+header {
+    background: #075b3b;
+    color: white;
+    padding: 22px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+nav {
+    background: #06452e;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+}
+
+.hero {
+    padding: 65px 20px;
+    text-align: center;
+    background: #e2f1e8;
+}
+
+.hero h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.button {
+    background: #087a4b;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000010;
+    text-align: center;
+}
+
+.product h3 {
+    color: #087a4b;
+    margin-bottom: 15px;
+}
+
+.product p {
+    margin: 12px 0;
+}
+
+.product button {
+    margin-top: 15px;
+}
+
+.notice {
+    background: #fff3cd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    line-height: 1.6;
+}
+
+footer {
+    background: #06452e;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 25px;
+    margin: auto;
+    max-width: 400px;
+}
+
+dialog::backdrop {
+    background: #0009;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>GROWWISE UGANDA</h1>
+    <p>Your Financial Future Starts With Informed Choices</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+    <h2>Explore Investment Opportunities</h2>
+    <p>Discover different investment options and learn about their potential risks and returns.</p>
+    <a href="#products" class="button">Explore Products</a>
+</section>
+
+<section class="container" id="products">
+
+<h2>Our Investment Products</h2>
+
+<div class="products">
+
+    <div class="product">
+        <h3>Agriculture Plan</h3>
+        <p>Minimum: UGX 50,000</p>
+        <p>Illustrative term: 6 months</p>
+        <p>Returns are not guaranteed.</p>
+        <button class="button" onclick="showDetails('Agriculture Plan')">View Details</button>
+    </div>
+
+    <div class="product">
+        <h3>Business Plan</h3>
+        <p>Minimum: UGX 100,000</p>
+        <p>Illustrative term: 12 months</p>
+        <p>Returns are not guaranteed.</p>
+        <button class="button" onclick="showDetails('Business Plan')">View Details</button>
+    </div>
+
+    <div class="product">
+        <h3>Energy Plan</h3>
+        <p>Minimum: UGX 200,000</p>
+        <p>Illustrative term: 18 months</p>
+        <p>Returns are not guaranteed.</p>
+        <button class="button" onclick="showDetails('Energy Plan')">View Details</button>
+    </div>
+
+</div>
+
+<div class="notice">
+    <strong>Investment Risk Warning:</strong>
+    These are demonstration products, not actual investment offers.
+    Investment capital can be lost. Verify the provider's regulatory
+    authorization and understand all terms before investing.
+</div>
+
+</section>
+
+<section class="container" id="about">
+    <h2>About GrowWise Uganda</h2>
+    <p style="text-align:center;line-height:1.8">
+        GrowWise Uganda is a demonstration investment platform
+        designed to help visitors explore investment opportunities
+        and understand financial risks.
+    </p>
+</section>
+
+<section class="container" id="contact">
+    <h2>Contact Us</h2>
+    <p style="text-align:center">
+        Email: support@example.com
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 GrowWise Uganda</p>
+    <p>Demo website. No deposits or payments are accepted.</p>
+</footer>
+
+<dialog id="details">
+    <h2 id="productName"></h2>
+    <p style="margin:15px 0">
+        This is a demonstration product. Review the provider's
+        authorization, fees, risks, investment terms and withdrawal
+        conditions before considering any real investment.
+    </p>
+    <button class="button" onclick="document.getElementById('details').close()">Close</button>
+</dialog>
+
+<script>
+function showDetails(name) {
+    document.getElementById("productName").textContent = name;
+    document.getElementById("details").showModal();
+}
+</script>
+
+</body>
+</html>
